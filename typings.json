@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "react": "registry:dt/react#0.14.0+20160423065914",
+    "react-css-modules": "./src/types/react-css-modules.d.ts",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-router": "registry:dt/react-router#2.0.0+20160501155536",
+    "react-router/history": "registry:dt/react-router/history#2.0.0+20160316155526",
+    "require": "github:DefinitelyTyped/DefinitelyTyped/requirejs/require.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c"
+  }
+}
