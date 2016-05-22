@@ -75,6 +75,7 @@ var make = function(options) {
         output: {
             path: __dirname + '/dist',
             filename: 'bundle.js',
+            publicPath: '/',
         },
         module: {
             loaders: [
