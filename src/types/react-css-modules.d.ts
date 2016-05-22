@@ -9,5 +9,5 @@ interface CSSModulesFn {
 declare var CSSModules: CSSModulesFn;
 
 declare module "react-css-modules" {
-	export = CSSModules;
+	export default CSSModules;
 }

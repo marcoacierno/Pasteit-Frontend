@@ -1,11 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import {
+    Router,
+    Route,
+    IndexRoute,
+    browserHistory,
+} from 'react-router';
 
 import { Home, Error404 } from '../pages';
 
 import '../../styles/app';
+
+require('es6-promise').polyfill();
 
 
 ReactDOM.render(<Router history={browserHistory}>
