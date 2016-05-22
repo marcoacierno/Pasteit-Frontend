@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CSSModules from 'react-css-modules';
+import * as CSSModules from 'react-css-modules';
 
 const styles = require('./styles');
 
