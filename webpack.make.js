@@ -9,7 +9,7 @@ var make = function(options) {
     var plugins;
     var cssLoaders;
     var entry = {
-        index: './src/js/app/index.tsx',
+        index: './src/js/app/index.js',
     };
 
     var devServerPort = options.devServerPort || 5000;
@@ -19,7 +19,7 @@ var make = function(options) {
             index: [
                 'webpack-dev-server/client?http://0.0.0.0:' + devServerPort,
                 'webpack/hot/only-dev-server',
-                './src/js/app/index.tsx',
+                './src/js/app/index.js',
             ],
         };
 
@@ -81,12 +81,7 @@ var make = function(options) {
             loaders: [
                 {
                     test: /\.js$/,
-                    loader: 'babel',
-                    exclude: path.join(__dirname, '/node_modules/'),
-                },
-                {
-                    test: /\.tsx?/,
-                    loaders: ['react-hot', 'babel', 'ts'],
+                    loaders: ['react-hot', 'babel'],
                     exclude: path.join(__dirname, '/node_modules/'),
                 },
                 {
@@ -97,9 +92,7 @@ var make = function(options) {
         },
         plugins: plugins,
         resolve: {
-            extensions: [
-                '', '.js', '.json', '.ts', '.tsx', '.css',
-            ],
+            extensions: ['', '.js', '.json', '.css'],
         },
     };
 };
