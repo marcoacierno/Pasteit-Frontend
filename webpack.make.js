@@ -88,6 +88,10 @@ var make = function(options) {
                     test: /\.css/,
                     loaders: cssLoaders,
                 },
+                {
+                    test: /\.json/,
+                    loader: 'json-loader',
+                },
             ],
         },
         plugins: plugins,
