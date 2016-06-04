@@ -13,6 +13,7 @@
         "max-len": [2, 120],
         "react/prefer-stateless-function": 0,
         "react/wrap-multilines": 0,
-        "react/jsx-indent": ["error", 4]
+        "react/jsx-indent": ["error", 4],
+        "new-cap": 0
     }
 }
