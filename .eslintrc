@@ -1,19 +1,14 @@
 {
     "parser": "babel-eslint",
     "extends": "airbnb",
-    "ecmaFeatures":
-    {
-      "modules": true
-    },
-    "env": {
-        "es6": true,
-        "browser": false
-    },
     "settings": {
         "import/resolver": {
             "webpack": {
                 "config": "webpack.conf.dev.js"
             }
         }
-    }
+    },
+    "plugins": [
+        "import"
+    ]
 }
