@@ -2,7 +2,6 @@ import React, {
     Component,
 } from 'react';
 import Relay from 'react-relay';
-import Paste from '../paste/';
 
 
 export class Paste extends Component {
