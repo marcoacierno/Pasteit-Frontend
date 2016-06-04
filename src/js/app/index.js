@@ -12,7 +12,7 @@ import useRelay from 'react-router-relay';
 
 import { Home, Error404 } from '../pages';
 
-import { ViewerQueries } from '../queries/';
+import { PastesQueries } from '../queries/';
 
 import '../../styles/app';
 
@@ -28,7 +28,7 @@ ReactDOM.render(<Router
     <Route path="/">
         <IndexRoute
             component={Home}
-            queries={ViewerQueries}
+            queries={PastesQueries}
         />
         <Route
             path="*"

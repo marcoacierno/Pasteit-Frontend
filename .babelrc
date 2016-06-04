@@ -4,6 +4,7 @@
         "react"
     ],
     "plugins": [
-        "./src/graphql/babelRelayPlugin"
+        "./src/graphql/babelRelayPlugin",
+        "transform-class-properties"
     ]
 }

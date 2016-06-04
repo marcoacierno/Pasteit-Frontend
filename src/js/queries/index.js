@@ -1,1 +1,1 @@
-export { default as ViewerQueries } from './ViewerQueries';
+export { default as PastesQueries } from './PastesQueries';

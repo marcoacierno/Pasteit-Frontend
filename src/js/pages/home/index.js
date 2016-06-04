@@ -1,20 +1,25 @@
 import React, {
     Component,
+    PropTypes,
 } from 'react';
 import Relay from 'react-relay';
 import CSSModules from 'react-css-modules';
-import Pastes from '../../components/pastes/';
+import Pastes from '../../components/Pastes/';
 import styles from './styles';
 
 
 export class Home extends Component {
+    static propTypes = {
+        pastes: PropTypes.object,
+    };
+
     render() {
         return <div styleName="test">
             Hello.
             <br />
             Public pastes:
 
-            <Pastes />
+            <Pastes pastes={this.props.pastes} />
         </div>;
     }
 }
@@ -22,5 +27,11 @@ export class Home extends Component {
 
 export default Relay.createContainer(CSSModules(styles)(Home), {
     initialVariables: {},
-    fragments: {},
+    fragments: {
+        pastes: () => Relay.QL`
+            fragment on PasteNodeDefaultConnection {
+                ${Pastes.getFragment('pastes')}
+            }
+        `,
+    },
 });
