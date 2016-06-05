@@ -15,6 +15,6 @@ export const PastesQueries = {
 export const PasteQueries = {
     paste: () => Relay.QL`
         query {
-            pastes(hashId: $hashId)
+            paste(hashId: $hashId)
         }`,
 };
