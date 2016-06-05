@@ -30,7 +30,7 @@ export default Relay.createContainer(PastesList, {
             fragment on PasteNodeDefaultConnection {
                 edges {
                     node {
-                        ${Paste.getFragment('paste')}
+                        ${PasteListItem.getFragment('paste')}
                     }
                 }
             }

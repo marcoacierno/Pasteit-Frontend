@@ -39,7 +39,7 @@ export default Relay.createContainer(CSSModules(styles)(Home), {
     fragments: {
         pastes: () => Relay.QL`
             fragment on PasteNodeDefaultConnection {
-                ${Pastes.getFragment('pastes')}
+                ${PastesList.getFragment('pastes')}
             }
         `,
         me: () => Relay.QL`
