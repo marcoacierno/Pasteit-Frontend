@@ -11,8 +11,8 @@ class PastesList extends Component {
         pastes: PropTypes.object,
     };
 
-    renderPaste(paste) {
-        return <PasteListItem paste={paste.node} />;
+    renderPaste(paste, index) {
+        return <PasteListItem key={index} paste={paste.node} />;
     }
 
     render() {
