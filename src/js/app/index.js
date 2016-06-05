@@ -10,7 +10,7 @@ import {
 import Relay from 'react-relay';
 import useRelay from 'react-router-relay';
 
-import { Home, Error404 } from '../pages';
+import { Page, Home, Error404, CreatePaste, ViewPaste } from '../pages';
 
 import { PastesQueries } from '../queries/';
 
