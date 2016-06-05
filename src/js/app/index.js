@@ -12,7 +12,7 @@ import useRelay from 'react-router-relay';
 
 import { Page, Home, Error404, CreatePaste, ViewPaste } from '../pages';
 
-import { PastesQueries } from '../queries/';
+import { PastesQueries, PasteQueries } from '../queries/';
 
 import '../../styles/app';
 
@@ -25,14 +25,14 @@ ReactDOM.render(<Router
     history={browserHistory}
     render={applyRouterMiddleware(useRelay)}
     environment={Relay.Store}>
-    <Route path="/">
-        <IndexRoute
-            component={Home}
-            queries={PastesQueries}
-        />
-        <Route
-            path="*"
-            component={Error404}
-        />
+    <Route path="/" componet={Page}>
+        <IndexRoute component={Home} queries={PastesQueries} />
+
+        <Route path="pastes">
+            <Route path="new/" component={CreatePaste} />
+            <Route path=":hashId/" component={ViewPaste} queries={PasteQueries} />
+        </Route>
+
+        <Route path="*" component={Error404} />
     </Route>
 </Router>, document.querySelector('#root'));

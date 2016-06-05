@@ -3,16 +3,16 @@ import React, {
     PropTypes,
 } from 'react';
 import Relay from 'react-relay';
-import Paste from '../Paste/';
+import PasteListItem from '../PasteListItem/';
 
 
-class Pastes extends Component {
+class PastesList extends Component {
     static propTypes = {
         pastes: PropTypes.object,
     };
 
     renderPaste(paste) {
-        return <Paste paste={paste.node} />;
+        return <PasteListItem paste={paste.node} />;
     }
 
     render() {
@@ -24,7 +24,7 @@ class Pastes extends Component {
 }
 
 
-export default Relay.createContainer(Pastes, {
+export default Relay.createContainer(PastesList, {
     fragments: {
         pastes: () => Relay.QL`
             fragment on PasteNodeDefaultConnection {
